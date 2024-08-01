@@ -1,0 +1,33 @@
+:root {
+    --white: #eee;
+    --black: #222
+}
+
+body {
+    background-color: var(--white);
+    color: var(--black);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+h1 {
+    font-size: 1.6rem;
+}
