@@ -15,7 +15,7 @@ const tempData = [
     director: "George Lucas",
     duration: "2h 1min",
     genre: ["Action", "Adventure", "Fantasy", "Sci-Fi"],
-    rate: 8.7,
+    rate: 6.7,
     poster:
       "https://m.media-amazon.com/images/M/MV5BOTA5NjhiOTAtZWM0ZC00MWNhLThiMzEtZDFkOTk2OTU1ZDJkXkEyXkFqcGdeQXVyMTA4NDI1NTQx._V1_SX300.jpg",
   },

@@ -47,7 +47,9 @@ tempData.forEach(movie => {
     let spanRate = document.createElement("span")
     spanRate.classList.add("badge")
     spanRate.classList.add("rounded-pill")
-    spanRate.classList.add("text-bg-success")
+    if(movie.rate >= 7) spanRate.classList.add("text-bg-success")
+    if(movie.rate >= 4 && movie.rate < 7) spanRate.classList.add("text-bg-warning")
+    if(movie.rate < 4) spanRate.classList.add("text-bg-danger")
     spanRate.innerHTML = movie.rate
 
     let liRate = document.createElement("li")
@@ -87,6 +89,7 @@ tempData.forEach(movie => {
 
 });
 
+// model
 //    <div class="card card-size">
 //      <img src="https://mb.cision.com/Public/14247/2902071/856b720fb81856ec_800x800ar.jpg" class="card-img-top" alt="...">
 //      <div class="card-body">
