@@ -1,12 +1,12 @@
-const {getMovies} = require('../services/moviesService');
+const moviesService = require('../services/moviesService');
 
 const getAllMovies = async (req, res) => {
     try {
-        const movies = await getMovies();
+        const movies = await moviesService.getMovies();
         res.status(200).json(movies);
     } catch (err) {
-        res.status(500).json({
-            "error": "Error interno del servidor"
+        res.status(400).json({
+            "error": "Error en el controlador"
         })
     }
 }
