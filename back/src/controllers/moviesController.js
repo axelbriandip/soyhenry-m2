@@ -11,6 +11,22 @@ const getAllMovies = async (req, res) => {
     }
 }
 
+const createMovie = async (req,res,next) => {
+    try {
+        const {id, title} = req.body;
+        const newMovie = await moviesService.createMovie(id, title);
+        res.status(200).json({
+            status: "success",
+            data: newMovie
+        })
+    } catch (err) {
+        res.status(400).json({
+            "error": "Error en el controlador"
+        })
+    }
+}
+
 module.exports = {
     getAllMovies,
+    createMovie
 };
