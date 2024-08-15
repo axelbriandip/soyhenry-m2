@@ -62,13 +62,13 @@ const renderCads = data => {
         let view = document.createElement("a")
         let download = document.createElement("a")
     
-        view.classList.add("card-link")
-        view.innerHTML = "Ver"
-        view.href = "#"
+        // view.classList.add("card-link")
+        // view.innerHTML = "Ver"
+        // view.href = "#"
     
-        download.classList.add("card-link")
-        download.innerHTML = "Descargar"
-        download.href = "#"
+        // download.classList.add("card-link")
+        // download.innerHTML = "Descargar"
+        // download.href = "#"
         
         // all appends
         containerRow.appendChild(card)
