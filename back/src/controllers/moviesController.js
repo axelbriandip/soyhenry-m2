@@ -13,8 +13,10 @@ const getAllMovies = async (req, res) => {
 
 const createMovie = async (req,res,next) => {
     try {
-        const {id, title} = req.body;
-        const newMovie = await moviesService.createMovie(id, title);
+        const { title, year, director, duration, genre, rate, poster } = req.body;
+
+        const newMovie = await moviesService.createMovie( title, year, director, duration, genre, rate, poster );
+
         res.status(200).json({
             status: "success",
             data: newMovie
