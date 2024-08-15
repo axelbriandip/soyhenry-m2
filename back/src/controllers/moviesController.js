@@ -6,7 +6,7 @@ const getAllMovies = async (req, res) => {
         res.status(200).json(movies);
     } catch (err) {
         res.status(400).json({
-            "error": "Error en el controlador"
+            "error": "Error en el servidor"
         })
     }
 }
@@ -21,7 +21,7 @@ const createMovie = async (req,res,next) => {
         })
     } catch (err) {
         res.status(400).json({
-            "error": "Error en el controlador"
+            "error": "Error en el servidor"
         })
     }
 }

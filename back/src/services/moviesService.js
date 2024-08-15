@@ -1,9 +1,9 @@
-const User = require('../models/User');
+const Movie = require('../models/Movie');
 
 module.exports = {
     getMovies: async () => {
-        const users = await User.find();
-        return users;
+        const movies = await Movie.find();
+        return movies;
     },
     createMovie: async (id, title) => {}
 }
