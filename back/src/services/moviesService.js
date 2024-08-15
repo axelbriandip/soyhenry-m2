@@ -8,5 +8,9 @@ module.exports = {
     createMovie: async ( title, year, director, duration, genre, rate, poster ) => {
         const newMovie = await Movie.create({ title, year, director, duration, genre, rate, poster });
         return newMovie;
+    },
+    getMovieById: async (id) => {
+        const movie = await Movie.findById(id);
+        return movie;
     }
 }

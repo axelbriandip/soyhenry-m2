@@ -3,7 +3,25 @@ const moviesService = require('../services/moviesService');
 const getAllMovies = async (req, res) => {
     try {
         const movies = await moviesService.getMovies();
-        res.status(200).json(movies);
+        res.status(200).json({
+            message: 'success',
+            data: movies
+        });
+    } catch (err) {
+        res.status(400).json({
+            "error": "Error en el servidor"
+        })
+    }
+}
+
+const getMovieById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const movie = await moviesService.getMovieById(id);
+        res.status(200).json({
+            message: 'success',
+            data: movie
+        });
     } catch (err) {
         res.status(400).json({
             "error": "Error en el servidor"
@@ -30,5 +48,6 @@ const createMovie = async (req,res,next) => {
 
 module.exports = {
     getAllMovies,
-    createMovie
+    createMovie,
+    getMovieById
 };
