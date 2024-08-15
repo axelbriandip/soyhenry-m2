@@ -12,5 +12,9 @@ module.exports = {
     getMovieById: async (id) => {
         const movie = await Movie.findById(id);
         return movie;
+    },
+    getMovieByTitle: async (title) => {
+        const movie = await Movie.findOne({ title });
+        return movie;
     }
 }

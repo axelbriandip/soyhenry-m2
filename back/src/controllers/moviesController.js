@@ -29,6 +29,21 @@ const getMovieById = async (req, res) => {
     }
 }
 
+const getMovieByTitle = async (req, res) => {
+    try {
+        const { title } = req.body;
+        const movie = await moviesService.getMovieByTitle(title);
+        res.status(200).json({
+            message: 'success',
+            data: movie
+        });
+    } catch (err) {
+        res.status(400).json({
+            "error": "Error en el servidor"
+        })
+    }
+}
+
 const createMovie = async (req,res,next) => {
     try {
         const { title, year, director, duration, genre, rate, poster } = req.body;
@@ -49,5 +64,6 @@ const createMovie = async (req,res,next) => {
 module.exports = {
     getAllMovies,
     createMovie,
-    getMovieById
+    getMovieById,
+    getMovieByTitle
 };
